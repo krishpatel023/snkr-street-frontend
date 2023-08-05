@@ -1,0 +1,188 @@
+.account-settings-box{
+    width:80%;
+    height:80%;
+    border-radius: 1rem;
+}
+.account-information{
+    width:100%;
+    height:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-information-img{
+    width:14rem;
+    height:14rem;
+    border-radius:50%;
+}
+.account-information-img img{
+    width:12rem;
+    height:12rem;
+    border-radius:50%;
+}
+.account-information-info{
+    width:60%;
+    margin-left: 3rem;
+}
+.account-information-info button{
+    background-color: var(--transparent);
+    border: none;
+    color: var(--light-accent);
+    font-size: 1rem;
+}
+.account-information-info button:hover{
+    cursor: pointer;
+}
+
+
+/* CHANGE ADDRESS */
+.account-addresses{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.order-address-section{
+    width:80%;
+}
+.order-address-box-new{
+    width:12rem;
+    max-height:90%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    line-height: 0.6rem;
+    padding: 0 2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+span[name="edit-btn"]{
+    color: var(--light-accent);
+    font-size: 1rem;
+}
+span[name="edit-btn"]:hover{
+    cursor: pointer;
+}
+.change-address-box{
+    width:80%;
+    height:80%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.change-address-sec-box{
+    width:70%;
+    height:90%;
+}
+.change-address-back-btn{
+    width:100%;
+    height:10%;
+}
+.change-address-back-btn button{
+    width:5rem;
+    height: 2rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    background-color: var(--transparent);
+    border: none;
+} 
+.change-address-back-btn button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}    
+
+
+/* EDIT USER DETAILS */
+
+.change-settings-user-box{
+    width:80%;
+    height:80%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.change-settings-user-sec-box{
+    width:70%;
+    height:100%;
+}
+.change-user-back-btn{
+    width:100%;
+    height:10%;
+}
+.change-user-back-btn button{
+    width:5rem;
+    height:2rem;
+    margin-top: 2rem ;
+    margin-left: 2rem;
+    background-color: var(--transparent);
+    border: none;
+}
+.change-user-back-btn button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.change-user-sec-box{
+    width:100%;
+}
+
+
+.address-proceed-section{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2% ;
+    flex-wrap: wrap;
+}
+.address-proceed-btn{
+    width: 10rem;
+    height: 3rem;
+}
+.btn-green button{
+    background-color: rgb(81, 199, 81);
+}
+.btn-red button{ 
+    background-color: rgb(255, 0, 0);
+}
+.fields--3{
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 800px){
+    .user-settings-detail{
+        width:100%;
+    }
+    .user-settings-navbar{
+        display: none;
+    }
+    .account-settings-box,
+    .change-settings-user-box{
+        width:100%;
+        height:100%;
+    }
+    .account-information{
+        width:100%;
+        height:60%;
+        flex-direction: column;
+    }
+    .account-information-info{
+        display: flex;
+        width:100%;
+        margin-left: 0;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        line-height: 1rem;
+        font-size: 1.2rem;
+    }
+    .order-address-section{
+        width:90%;
+    }
+}

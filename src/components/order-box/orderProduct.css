@@ -1,0 +1,46 @@
+.order-product-wrapper{
+    width:90%;
+    height:10rem;
+    display:flex;
+}
+.order-product-image{
+    width:20%;
+    height:100%;
+}
+.order-product-image img{
+    width:80%;
+    max-height:90%;
+    aspect-ratio: 1/1;
+}
+.order-product-name{
+    width:60%;
+    height:100%;
+}
+.order-product-review-section{
+    width: 20%;
+    height:100%;
+}
+.order-product-review-btn,
+.order-product-detail-btn{
+    width:80%;
+    height:4rem;
+}
+
+.order-product-review-btn button,
+.order-product-detail-btn button{
+    width:80%;
+    height:60%;
+    min-width: 7rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+
+@media only screen and (max-width: 800px){
+    .order-product-review-section{
+        display: none !important;
+    }
+    .order-product-name{
+        width:80%;
+    }
+}

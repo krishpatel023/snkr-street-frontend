@@ -1,0 +1,19 @@
+.product-review-box{
+    width:80%;
+    margin-top: 2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-secondary);
+    border-radius: 1rem;
+}
+.product-review-subbox{
+    width:90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8rem;
+}
+.product-review-subbox p{
+    line-height: 1.3rem;
+}

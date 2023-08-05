@@ -1,0 +1,73 @@
+table{
+    background-color: rgb(255, 255, 255);
+    width:99%;
+    /* height:100%; */
+    /* border-radius: 1rem; */
+    border-collapse: collapse;
+    padding: 0;
+    border:1px solid black;
+}
+tr{
+    text-align: center;
+    gap: 0%;
+}
+.heading{
+    height:3.5rem;
+}
+thead{
+    height:12%;
+    background-color: var(--light-btn);
+    color: var(--light-primary);
+    position: sticky;
+    top: -1%;
+}
+th{
+    height:100%;
+}
+tbody{
+    height:90%;
+}
+/* th{
+ border-radius: 1rem;   
+} */
+.row{
+    border-bottom: 0.1rem solid #2322287b;
+    height:3.1rem;
+    max-height: 10%;
+    /* line-height: 5%; */
+}
+.row:hover{
+    background-color: rgba(0, 0, 0, 0.095);
+    cursor: pointer;
+}
+.actions button{
+    background: var(--transparent);
+    border: none;
+}
+.actions button:hover{
+    color:var(--light-accent);
+    cursor: pointer;
+}
+
+/* SPECIAL EFFECT */
+
+.order-placed{
+    background-color: rgb(80, 80, 80);
+    color:white;
+    border-radius: 0.3rem;
+}
+.order-in-transit{
+    background-color: rgb(255, 255, 163);
+    color:rgb(0, 0, 0);
+    border-radius: 0.3rem;
+}
+.order-delivered{
+    background-color: green;
+    color:white;
+    border-radius: 0.3rem;
+}
+.order-cancelled{
+    background-color: rgb(254, 38, 38);
+    color:white;
+    border-radius: 0.3rem;
+}

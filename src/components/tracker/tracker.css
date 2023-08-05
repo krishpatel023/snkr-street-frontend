@@ -1,0 +1,39 @@
+.tracker-wrapper{
+    width:100%;
+    height: 10vh;
+    margin-top: 2rem;
+    max-width: 100%;
+}
+.tracker-box{
+    width:70%;
+    height:50%;
+}
+.tracker-name{
+    width:70%;
+    height:50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tracker-name span{
+    width:33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.circle{
+    min-width:3rem;
+    min-height:3rem;
+    border-radius: 1.5rem;
+    background-color: rgb(48, 53, 60);
+    color:white;
+}
+.line-track{
+    min-width:4rem;
+    min-height:0.3rem;
+    background-color: rgb(48, 53, 60);
+}
+.tracker-active{
+    background-color: rgb(14, 142, 0);
+}

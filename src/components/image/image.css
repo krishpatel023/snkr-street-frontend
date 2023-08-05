@@ -1,0 +1,33 @@
+.image-wrapper{
+    width:100%;
+    height:100%;
+}
+.image-wrapper img{
+    width:100%;
+    height:100%;
+}
+
+.image-loading {
+    height: 100%;
+    width: 100%;
+    background: #f6f7f9;
+    /* margin-bottom: 13px;
+    margin-right: 5px; */
+  }
+  
+  /* Animation */
+  .image-loading {
+    animation: timeline;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px auto;
+  }
+  @keyframes timeline {
+    0% {
+      background-position: -350px 0;
+  }
+    100% {
+      background-position: 400px 0; }
+  }

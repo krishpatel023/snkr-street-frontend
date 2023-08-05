@@ -1,0 +1,68 @@
+.admin-orders-wrapper{
+    width:100vw;
+    height:100dvh;
+    overflow: hidden;
+}
+.admin-orders-header{
+    width:100%;
+    height:10%;
+}
+.admin-order-sub-wrapper{
+    width:100%;
+    height:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-orders-sidebar{
+    width:15%;
+    height:100%;
+}
+.admin-order-main-wrapper{
+    width:85%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-order-box-main{
+    width:80%;
+    height:80%;
+}
+.admin-order-select-category{
+    height:10%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+.admin-order-select-category button{
+    width:6rem;
+    height:2rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+.admin-order-active{
+    background-color: var(--green);
+    color: white;
+}
+
+@media only screen and (max-width: 800px){
+    .admin-orders-sidebar{
+        display: none !important;
+    }
+    .admin-order-main-wrapper{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .admin-order-box-main{
+        width:100%;
+    }
+    .admin-order-table{
+        width:100%;
+    }
+}
+

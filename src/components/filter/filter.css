@@ -1,0 +1,81 @@
+.filter-wrapper{
+    width:90%;
+    /* border-right: 2px solid red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.filter-dash{
+    width:90%;
+    height:0.05rem;
+    background-color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.filter-main{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-main button{
+    background-color: var(--transparent);
+    border: none;
+    margin-right: 0.5rem;
+}
+.filter-main button:hover{
+    cursor: pointer;
+}
+.filter-section{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.brand-section{
+    width:90%;
+    display:flex;
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.brand-section span{
+   margin-left: 10px;
+}
+
+
+.price-section{
+    width:90%;
+}
+.price-section-box{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.price-section-range{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+.price-section-range input{
+    width:90%;
+}
+/* HIDE INPUT NUMBERS ARROWS */
+.price-section-box input::-webkit-outer-spin-button,
+.price-section-box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.price-section-box input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    width:5rem;
+    text-align: center;
+}

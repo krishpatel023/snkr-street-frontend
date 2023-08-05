@@ -1,0 +1,116 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* LIGHT THEME */
+  --light-primary: #FAFAFA;
+  --light-secondary:#F3F4F6;
+  --light-background: #E8ECEF;
+  --light-accent:#0969DA;
+  --light-detail:black;
+  --light-btn:#232228;
+
+  /* DARK THEME */
+  --dark-background:#0D1117;
+  --dark-primary: #161B22;
+  --dark-secondary: #30363D;
+  --dark-accent:#0E3DD3;
+  --dark-detail: white;
+
+  /* COMMAN */
+  --transparent: rgba(0, 0, 0, 0);
+  --green:#2EA043;
+}
+*{
+  margin:0;
+  padding:0;
+}
+/* #root{
+  width:100dvw;
+  overflow-x: hidden;
+} */
+.background{
+  width:100%;
+  background-color: var(--light-background);
+  color: var(--light-detail);
+}
+.dark-mode .background{
+  background-color: var(--dark-background);
+  color: var(--dark-detail);
+}
+.secondary-bg{
+  background-color: var(--light-primary);
+  color: var(--light-detail);
+}
+.dark-mode .secondary-bg{
+  background-color: var(--dark-primary);
+  color: var(--dark-detail);
+}
+.button{
+  height:100%;
+  width:100%;
+  border:none;
+  border-radius: 0.5rem;
+  /* background:var(--light-secondary); */
+  background-color: #232228;
+  color: #FAFAFA;
+  font-size: 100%;
+  transition: all 0.5s;
+
+}
+.dark-mode .button{
+  background:var(--dark-secondary);
+  color: var(--dark-detail);
+}
+.button:hover{
+  transform:scale(1.05);
+  transition: all 0.5s;
+}
+.btn-accent{
+  background-color: var(--light-accent);
+  color:var(--light-primary);
+}
+.dark-mode .btn-accent{
+  background-color: var(--dark-accent);
+}
+/* SHORT ACCESS */
+.flex{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* SCROLL BAR */
+
+
+.scrollbar-horizontal::-webkit-scrollbar {
+  height: 10px;               /* width of the entire scrollbar */
+}
+.scrollbar-vertical::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+/* .player-playlist-subsection::-webkit-scrollbar-track {
+  background: rgba(92, 92, 92, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid rgba(20, 20, 20, 0.18);       color of the tracking area 
+} */
+.scrollbar-horizontal::-webkit-scrollbar-track,
+.scrollbar-vertical::-webkit-scrollbar-track {
+  background: var(--transparent);        /* color of the tracking area */
+}
+
+.scrollbar-horizontal::-webkit-scrollbar-thumb, 
+.scrollbar-vertical::-webkit-scrollbar-thumb{
+  background-color: var(--light-detail);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
