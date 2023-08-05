@@ -2,7 +2,7 @@
     width:100dvw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     overflow-x: hidden;
     min-height: 90dvh;
 }
@@ -246,6 +246,13 @@
 }
 
 @media only screen and (max-width: 800px){
+    .cart-box{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .cart-product-section{
+        width:100%;
+    }
     .cart-product{
         height:20rem;
     }

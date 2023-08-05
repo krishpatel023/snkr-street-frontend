@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import './header-n.css'
+import './header.css'
 import { Link, useNavigate } from 'react-router-dom'
 import LOGO from '../../assets/logo-black.png'
+import LOGOSmall from '../../assets/logo-small.png'
+import userImg from '../../assets/default_user.jpg'
 import { useSelector } from 'react-redux'
 import {useCookies} from 'react-cookie'
 export default function Header() {
@@ -30,6 +32,9 @@ export default function Header() {
       <div className="header-logo-section">
         <Link to='/' className='link'><img src={LOGO}></img></Link>
       </div>
+      <div className="header-logo-section-2">
+        <Link to='/' className='link'><img src={LOGOSmall}></img></Link>
+      </div>
       <div className="header-other-section">
         <Link to='/search' className='link-search'>Products</Link>
         <button className="nav-mode" name="cart" onClick={()=>{navigate('/cart')}}>
@@ -43,8 +48,8 @@ export default function Header() {
                   
                   {
                     showDropDown?
-                    <button onClick={()=>{doChangeDropDown()}}><span>Hi, Krish</span><i className="fa-solid fa-caret-down fa-xl fa-rotate-180"></i></button>
-                    :<button onClick={()=>{doChangeDropDown()}}><span>Hi, Krish</span><i className="fa-solid fa-caret-down fa-xl"></i></button>
+                    <button onClick={()=>{doChangeDropDown()}}><div className="user-img-down"><img src={userImg} alt="" /></div><i className="fa-solid fa-caret-down fa-xl fa-rotate-180"></i></button>
+                    :<button onClick={()=>{doChangeDropDown()}}><div className="user-img-down"><img src={userImg} alt="" /></div><i className="fa-solid fa-caret-down fa-xl"></i></button>
                   }
                   
               </div>
@@ -60,8 +65,8 @@ export default function Header() {
                   
                   {
                     showDropDown?
-                    <button onClick={()=>{doChangeDropDown()}}><span>Hi, User</span><i className="fa-solid fa-caret-down fa-xl fa-rotate-180"></i></button>
-                    :<button onClick={()=>{doChangeDropDown()}}><span>Hi, User</span><i className="fa-solid fa-caret-down fa-xl"></i></button>
+                    <button onClick={()=>{doChangeDropDown()}}><div className="user-img-down"><img src={userImg} alt="" /></div><i className="fa-solid fa-caret-down fa-xl fa-rotate-180"></i></button>
+                    :<button onClick={()=>{doChangeDropDown()}}><div className="user-img-down"><img src={userImg} alt="" /></div><i className="fa-solid fa-caret-down fa-xl"></i></button>
                   }
                   
               </div>
