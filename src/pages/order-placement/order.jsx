@@ -164,7 +164,7 @@ export default function Order(){
 
     return(
         <>
-            <div className="order-wrapper background">
+            <div className="order-wrapper-1 background">
 
                 <div className="order-place-navbar">
                     <Header />

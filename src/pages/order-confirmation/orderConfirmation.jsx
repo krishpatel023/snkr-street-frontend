@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router'
 import Header from '../../components/header/header'
 import OrderProduct from '../../components/order-box/orderProduct'
 import Success from '../../components/success-animation/success'
 import './orderConfirmation.css'
 export default function OrderConfirmation() {
+const navigate = useNavigate()
   return (
+
     <>
     <Header/>
     <div className='order-confirmation-wrapper background'>
@@ -25,7 +28,7 @@ export default function OrderConfirmation() {
                 <span>Cash on Delivery</span>   
             </div> */}
                 <div className="order-confirmation-btn">
-                    <button className='button'>Continue Shopping</button>
+                    <button className='button' onClick={()=>{navigate('/products')}}>Continue Shopping</button>
                 </div>
         </div>
     </div> 
