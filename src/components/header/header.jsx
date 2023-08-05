@@ -6,6 +6,7 @@ import LOGOSmall from '../../assets/logo-small.png'
 import userImg from '../../assets/default_user.jpg'
 import { useSelector } from 'react-redux'
 import {useCookies} from 'react-cookie'
+import Alert from '../alert/alert';
 export default function Header() {
   const navigate= useNavigate()
 
@@ -24,10 +25,17 @@ export default function Header() {
     setDropDown(!showDropDown)
   }
   const clickLogout = ()=>{
+    doChangeDropDown()
+    setLoggedIn(false)
     removeCookie("userToken")
+    setMessage("YOU HAVE BEEN LOGGED OUT SUCCESSFULLY")
+    setMsgType("success")
     navigate("/")
   }
+  const [messageData, setMessage] = useState()
+  const [msgType, setMsgType] = useState()
   return (
+    <>
     <div className='header-wrapper'>
       <div className="header-logo-section">
         <Link to='/' className='link'><img src={LOGO}></img></Link>
@@ -77,5 +85,10 @@ export default function Header() {
         }
       </div>
     </div>
+    <Alert
+        message={messageData}   
+        type = {msgType}
+    />
+    </>
   )
 }

@@ -1,14 +1,17 @@
+.auth-wrapper-sec{
+    width:100dvw;
+    overflow-x: hidden;
+}
 .auth-main-wrapper{
-    width:100vw;
+    width:100%;
     height:100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .auth-main-box{
-    width:25rem;
-    height:70%;
+    width:25em;
+    height:35em;
     /* border: 2px solid var(--dark-primary); */
     background-color: var(--light-primary);
     border-radius: 1rem;
@@ -19,6 +22,7 @@
 .auth-main-traditional{
     height:70%;
     width:100%;
+    /* background-color: blueviolet; */
 }
 .login-box{
     width:100%;
@@ -87,6 +91,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: rgba(137, 43, 226, 0.186); */
 }
 .google-btn{
     width:100%;
@@ -144,9 +149,146 @@
 }
 @media only screen and (max-width: 1100px) {
     .auth-main-box{
-        width:23rem;
+        width:30em;
+        height:40em;
     }
     .google-btn button{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
+}
+
+/* .demo-account-section{
+    width:100%;
+    height:3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.demo-account-section button{
+    background-color: var(--transparent);
+    border: none;
+    font-size: 1rem;
+    color:var(--light-accent)
+}
+.demo-account-section button:hover{
+    cursor: pointer;
+}
+.register-box{
+    height:100%;
+} */
+
+
+.auth-main-demo-wrapper{
+    width:100%;
+    height:10dvh;
+    background-color: rgba(0, 0, 255, 0);
+    position: absolute;
+    top: 90dvh;
+}
+.demo-box{
+    width:20rem;
+    height:10rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
+    bottom: calc(-100% + 11rem);
+    right: calc(-100% + 21rem);
+    z-index: 100;
+}
+.demo-account,
+.admin-account{
+    width:100%;
+    height:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    font-size: 1.1rem;
+}
+.demo-account button,
+.admin-account button{
+    width:8rem;
+    height:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--dark-secondary);
+    color: white;
+}
+.demo-account button:hover,
+.admin-account button:hover{
+    transform: scale(1.04);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.demo-box-x{
+    width:100%;
+    height:20%;
+    display: flex;
+    align-items: center;
+}
+.demo-box-x button{
+    width:3rem;
+    height:100%;
+    background-color: var(--transparent);
+    font-size: 1.4rem;
+    border: none;
+    color: var(--dark-secondary);
+}
+.demo-circle{
+    width:4rem;
+    height:4rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: var(--dark-secondary);
+    position: relative;
+    bottom: calc(-100% + 5rem);
+    right: calc(-100% + 5rem);
+    z-index: 100;
+}
+.demo-circle button{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 1.6rem;
+    background-color: var(--transparent);
+    color: white;
+}
+.demo-circle:hover{
+    transform: scale(1.04);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .demo-box{
+        width:30rem;
+        height:15rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        position: relative;
+        bottom: calc(-100% + 16rem);
+        right: calc(-100% + 31rem);
+        z-index: 100;
+    }
+    .demo-account button,
+.admin-account button{
+    width:10rem;
+    height:3rem;
+
+}
+.demo-account,
+.admin-account{
+    font-size: 1.3rem;
+}
 }

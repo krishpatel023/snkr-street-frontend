@@ -6,14 +6,19 @@ import { config , backendURL} from '../../utils/utils'
 import { useCookies } from 'react-cookie'
 import { useState ,useEffect} from 'react'
 import axios from 'axios'
+import emptyOrder from '../../assets/noOrder.jpg'
+import { useNavigate } from 'react-router'
 export default function AllOrders(){
     // const dataBase = [1,2,3,4,5,6,7,8]
-
+    const navigate = useNavigate()
     const [cookies,setCookie,removeCookie] = useCookies([])
     const [dataBase,setDataBase] = useState()
     useEffect(()=>{
         if(cookies.userToken){
             getUserOrders(cookies.userToken)
+        }
+        else{
+            navigate('/login')
         }
     },[])
     const getUserOrders = async(uid)=>{
@@ -34,19 +39,19 @@ export default function AllOrders(){
             </div>
             <div className="user-settings-detail flex-column">
                 <h1>ALL ORDERS</h1>
-                <div className="user-setting-box scrollbar-vertical">
-                    {
-                        dataBase?
-                        dataBase.map((data,i)=>
-                        <div className="order-setting-order" key={i}>
-                            <OrderBox
-                                data={data}
-                            />
-                        </div>
-                        )
-                        :null
-                    }
-                </div>
+                    <div className="user-setting-box scrollbar-vertical">
+                        {   
+                            dataBase?
+                            dataBase.map((data,i)=>
+                            <div className="order-setting-order" key={i}>
+                                <OrderBox
+                                    data={data}
+                                />
+                            </div>
+                            )
+                            :null
+                        }
+                    </div>
             </div>
         </div>
         </>

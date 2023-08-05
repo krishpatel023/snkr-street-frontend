@@ -148,7 +148,7 @@ export default function AccountSettings(){
                 },config);
                 setMessage("YOUR DATA HAS BEEN UPDATED")
                 setMsgType("success")
-                showUserEdit(false)
+                setShowUserEdit(false)
                 getUserInfo(cookies.userToken)
                 navigate(`/userSettings`)
             }catch(error){
@@ -220,9 +220,9 @@ export default function AccountSettings(){
                                     <span name='edit-btn'>EDIT <i className="fa-solid fa-pen-to-square"></i></span>
                                 </button>
                                 )
-                                :null
+                                :
+                                "NO ADDRESSES ARE CURRENTLY SAVED BY YOU"
                             }
-
                             {/* <button className="order-address-add-btn" onClick={()=>{setShowAddress(true);setError()}}><i className="fa-solid fa-plus fa-2xl"></i></button> */}
                         </div>
                         </div>

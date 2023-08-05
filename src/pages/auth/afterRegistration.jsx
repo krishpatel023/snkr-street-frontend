@@ -24,6 +24,9 @@ export default function AfterRegistration(){
             setUserId(cookies.userToken)
             checkIfAlreadyExists(cookies.userToken)
         }
+        else{
+            navigate('/login')
+        }
     },[]) 
     const checkIfAlreadyExists = async (myId)=>{
         try{
@@ -80,27 +83,46 @@ export default function AfterRegistration(){
     console.log("UID",userId)
     console.log(uploadedImg)
     return(
-        <div className="after-registration-wrapper background">
-            <div className="after-registration-box">
-                <div className="after-registration-image-section">
-                    <div className="after-registration-image-box">
-                        <div className="ar-image">
-                            <img src={uploadedImg? uploadedImg :myIMG} alt="" />
-                            <input type="file" accept="image/*" id='imageFile' onChange={(e)=>{imgupload(e.target.files[0]);setUploadedImgFile(e.target.files[0])}}/>
-                        </div>
-                        <div className="ar-button">
-                            <button onClick={clickUpload}><i className="fa-solid fa-camera fa-2xl"></i></button>
+        <div className="after-registration-wrapper">
+
+        
+        <div className="after-registration-box secondary-bg">
+                            <div className="change-user-back-btn">
+                                <button onClick={()=>{setShowUserEdit(false)}}><i className="fa-solid fa-arrow-left-long fa-2xl"></i></button>                        
+                            </div>
+                            <div className="change-user-profile-pic">
+                                <div className="after-registration-image-box">
+                                    <div className="ar-image">
+
+                                            <img src={uploadedImg? uploadedImg :myIMG} alt="" />
+                                        
+                                        
+                                        <input type="file" accept="image/*" id='imageFile' onChange={(e)=>{imgupload(e.target.files[0]);setUploadedImgFile(e.target.files[0])}}/>
+                                    </div>
+                                    <div className="ar-button">
+                                        <button onClick={clickUpload}><i className="fa-solid fa-camera fa-2xl"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        <div className="change-settings-user-sec-box">
+
+                            <div className="change-user-sec-box">
+                                    <div className="form">
+                                        <label className="field">
+                                            <span className="field__label" htmlFor="address">Name</span>
+                                            <input className="field__input" type="text" id="address"  onChange={(e)=>{setFirstName(e.target.value)}}/>
+                                        </label>
+                                        <label className="field">
+                                            <span className="field__label" htmlFor="address">Phone Number</span>
+                                            <input className="field__input" type="text" id="address" onChange={(e)=>{setPhone(e.target.value)}}/>
+                                        </label>
+                                    </div>
+                                    <div className="address-proceed-btn">
+                                        <button className='button' onClick={()=>{handleSubmit()}}>SAVE CHANGES <i className="fa-solid fa-check"></i></button>
+                                    </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="after-registration-detail">
-                    <input type="text" placeholder="First Name" onChange={(e)=>setFirstName(e.target.value)}/>
-                    <input type="tel" placeholder="Phone Number" onChange={(e)=>setPhone(e.target.value)}/>
-                </div>
-                <div className="after-registration-btn">
-                    <button onClick={handleSubmit}>Submit</button>
-                </div>
-            </div>
-        </div>
+                    </div>
     )
 }

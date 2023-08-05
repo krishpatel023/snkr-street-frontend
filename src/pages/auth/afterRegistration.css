@@ -5,46 +5,18 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--light-background);
 }
 .after-registration-box{
-    width:30rem;
-    height:40rem;
+    width:40rem;
+    height:35rem;
     border-radius: 1rem;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--light-primary);
 }
-.dark-mode-parent .after-registration-box{
-    background-color: var(--dark-secondary);
-}
-.after-registration-back{
-    width:100%;
-    height:10%;
-    display:flex;
-    /* justify-content: center; */
-    align-items: center;
-    padding:0 10%;
-}
-.after-registration-back button{
-    width:20%;
-    height:60%;
-    position: relative;
-    top: 25%;
-    border-radius: 0.3rem;
-    background-color: var(--light-primary);
-    border: 2px solid var(--light-detail);
-}
-.dark-mode-parent .after-registration-back button{
-    background-color: var(--dark-secondary);
-    border: 2px solid var(--dark-detail);
-    color:var(--dark-detail);
-}
-.after-registration-back button:hover{
-    transform: scale(1.05);
-    transition: all 0.5s;
-}
+/* ====================================================================== */
 .after-registration-image-section{
     width:100%;
     height:30%;
@@ -103,14 +75,15 @@
     background-color: rgba(255, 255, 255, 0.138);
     color: white;
 }
-.after-registration-detail{
+
+/* =========================================================================== */
+/* .after-registration-detail{
     width:100%;
     height:40%;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border: 2px solid red; */
 }
 .after-registration-detail input{
     width:70%;
@@ -151,11 +124,10 @@
 .after-registration-btn button:hover{
     transform: scale(1.05);
     transition: all 0.5s;
-}
-@media only screen and (max-width: 1100px) {
-    .after-registration-box{
-        width:20rem;
-        height:30rem;
+} */
+@media only screen and (max-width: 600px) {
+    .after-registration-wrapper{
+        background-color: var(--light-primary);
     }
     .after-registration-image-box{
         width:10rem;

@@ -12,8 +12,9 @@ export default function OrderConfirmation() {
                 <Success/>
             </div>
             <div className="order-confirmation-section-2">
-                <h2>Your order has been placed!</h2>
-                <span>The order confirmation has been sent to address@gmail.com</span>
+            <br />
+                <h2>Your order has been placed!</h2><br />
+                <span>You can track the order from your orders section.</span>
             </div>
             {/* <div className="order-confirmation-section-3">
                 <h3>Transaction Date</h3>
@@ -23,11 +24,9 @@ export default function OrderConfirmation() {
                 <h3>Payment Method</h3>
                 <span>Cash on Delivery</span>   
             </div> */}
-            <div className="order-confirmation-section-5">
                 <div className="order-confirmation-btn">
                     <button className='button'>Continue Shopping</button>
                 </div>
-            </div>
         </div>
     </div> 
     </>

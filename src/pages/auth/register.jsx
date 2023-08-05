@@ -46,10 +46,11 @@ function Register(){
         <div className="register-admin-create-users-panel-wrapper">
             {
                 !isCreated ?
+                <>
                 <div className="auth-main-wrapper background">
                     <div className="auth-main-box">
                         <div className="auth-main-traditional">
-                            <div className="login-box">
+                            <div className="login-box register-box">
                                 <h1>SIGN UP</h1>
                                 <br />
                                 <input type="email" placeholder='E-mail' onChange={(e)=>{setEmail(e.target.value);setMessage("")}}/>
@@ -71,6 +72,7 @@ function Register(){
                         </div>
                     </div>
                 </div>
+                </>
             : null
             }
             {

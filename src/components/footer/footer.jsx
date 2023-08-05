@@ -1,5 +1,6 @@
 import './footer.css'
 import Logo from '../../assets/logo-black.png'
+import {Link} from 'react-router-dom'
 export default function Footer() {
   return (
     <>
@@ -28,11 +29,11 @@ export default function Footer() {
         </div>
         <div className="footer-section-2">
           <h2>OUR POLICIES</h2>
-          <button>Privacy Policy</button>
-          <button>Shipping Policy</button>
-          <button>Returns and Refunds</button>
-          <button>Terms and Condition</button>
-          <button>Seller Policy</button>
+          <Link className='link-footer'>Privacy Policy</Link>
+          <Link className='link-footer'>Shipping Policy</Link>
+          <Link className='link-footer'>Returns and Refunds</Link>
+          <Link className='link-footer'>Terms and Condition</Link>
+          <Link className='link-footer'>Seller Policy</Link>
         </div>
         <div className="footer-section-3">
           <h2>PAYMENT METHODS AVAILABLE</h2>

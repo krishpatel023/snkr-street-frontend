@@ -7,17 +7,40 @@ import AuthenticityImg from '../../assets/authenticity.png'
 import Quality from '../../assets/quality.png'
 import LowestRate from '../../assets/reduce-cost.png'
 import Footer from "../../components/footer/footer"
+import Alert from "../../components/alert/alert"
+import { useState } from "react"
+import { useNavigate } from "react-router"
+import homeBanner from '../../assets/home-banner.jpg'
 export default function Home(){
+    const navigate = useNavigate()
+    const [messageData, setMessage] = useState()
+    const [msgType, setMsgType] = useState()
+    const [email, setEmail] = useState()
+    const clickSubscribe = ()=>{
+        if(email){
+            setMessage("YOU HAVE BEEN ADDED TO THE MAILING LIST")
+            setMsgType("success")
+        }
+        else{
+            setMessage("PLEASE ENTER A VALID E-MAIL ADDRESS")
+            setMsgType("error")
+        }
+
+    }
     return( 
         <>
         <Header/>
+        <Alert
+            message={messageData}   
+            type = {msgType}
+        />
         <div className="home-wrapper background">    
             <div className="hero-section">
                 <div className="hero-section-1">
                     <div className="hero-section-1-box">
                         <h1>Step into the World Of Sneakers</h1>
                         <h5>Discover Authentic, Rare & Premium Shoes From the World's Best Brands</h5>
-                        <button>
+                        <button onClick={()=>{navigate('/search')}}>
                             Shop Now <i className="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -26,25 +49,36 @@ export default function Home(){
                     <img src={HeroImg} alt="" />
                 </div>
             </div>
-            <div className="brand-section">
+            <div className="brand-section-111">
                 <h1>BRANDS AVAILABLE</h1>
-                <Marquee/>
+                <div className="home-marquee">
+                    <Marquee/>
+                </div>
+
             </div>
-            <div className="our-services">
-                <div className="our-service-box">
-                    <img src={AuthenticityImg} alt="" />
-                    <h2>100% Authentic Products Only</h2>
-                    <span>We ensure the Genuine Integrity of Every Product</span>
+            <div className="offer-banner-section">
+                <div className="offer-banner">
+                    <div className="offer-banner-img">
+                        <img src={homeBanner} alt="" />
+                    </div>
+                    <div className="offer-banner-text">
+                        <span>LIMITED OFFER</span>
+                        <h1>Get 35% Off this friday along with a special gift</h1>
+                        <button>GRAB NOW <i className="fa-solid fa-arrow-right"></i></button>
+                    </div>
                 </div>
-                <div className="our-service-box">
-                    <img src={Quality} alt="" />
-                    <h2>Collection of Exclusively Rare Shoes.</h2>
-                    <p>We search the entire market for Rare Shoes so you don't have to</p>
-                </div>
-                <div className="our-service-box">
-                    <img src={LowestRate} alt="" />
-                    <h2>Unbeatable rates that keep you coming back.</h2>
-                    <p>We offer unbeatable rates to ensure customer satisfaction and loyalty.</p>
+            </div>
+            <div className="home-newsletter-section">
+                <h1>Subscribe to our newsletter to get updates to our latest collections</h1>
+                <span>Get 20% off on your first order just by subscribing to our newsletter.</span>
+                <div className="newsletter-mailbox">
+                    <div className="newsletter-mailbox-input">
+                        <i className="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter Your Email" onChange={(e)=>{setEmail(e.target.value)}}/>
+                    </div>
+                    <div className="newsletter-mailbox-button">
+                        <button onClick={()=>{clickSubscribe()}}>Subscribe</button>
+                    </div>
                 </div>
             </div>
         </div>
