@@ -63,7 +63,8 @@
 	font-size: 1.3rem;
 	transition: all 0.5s;
 	background-color: var(--transparent);
-	border: none;
+	border:none;
+	position: relative;
 }
 .dark-mode .nav-mode{
 	color:var(--dark-detail);
@@ -91,9 +92,13 @@ button[name="cart"] .cart-nav-2{
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	position: relative;
+	/* position: relative;
 	top: -105%;
-	left: 55%;
+	left: 55%; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(10%, -100%);
 }
 
 
